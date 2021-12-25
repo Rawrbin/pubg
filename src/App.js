@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className={theme.container}>
-      <h1>#Firebase storage</h1>
+      <h1>Firebase storage</h1>
       <div className={theme.activeMaps}>
         {!isLoading && data.filter(x => x.active === true).map((map) => {
           return (
