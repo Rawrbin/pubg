@@ -9,22 +9,16 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeMap, setActiveMap] = useState(null);
 
-  console.log(activeMap)
-  function getData() {
-    ref.onSnapshot((querySnapshot) => {
+  useEffect(() => {
+    ref.onSnapshot((x) => {
       const items = [];
-      querySnapshot.forEach((doc) => {
+      x.forEach((doc) => {
         items.push(doc.data());
       })
       setData(items);
       setIsLoading(false);
     })
-  }
-
-  useEffect(() => {
-    getData();
-    getData();
-  }, [])
+  }, [data, ref])
 
   return (
     <div className={theme.container}>
@@ -35,6 +29,7 @@ function App() {
               <li className={theme.mapNames} onClick={() => setActiveMap(map.id)} key={map.id}>{map.name}</li>
           )
         })}
+        <div>{activeMap}</div>
         </div>
     </div>
   );
