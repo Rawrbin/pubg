@@ -1,0 +1,21 @@
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.activeMaps {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+
+    .mapNames {
+        list-style: none;
+        cursor: pointer; 
+    }
+}
