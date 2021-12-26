@@ -37,11 +37,7 @@ function App() {
                   return (
                     <li
                       key={map.id}
-                      className={
-                        activeMap === map.name
-                          ? theme.selectedMap
-                          : theme.mapNames
-                      }
+                      className={activeMap === map.name ? theme.selectedMap : theme.mapNames}
                       onClick={() => setActiveMap(map.name)}
                     >
                       {map.name}
@@ -58,15 +54,13 @@ function App() {
         </div>
       )}
 
-      {activeMap === "Karakin" && <div>Karakin</div>}
+      {activeMap === "Miramar" && <div className={theme.centerContent}>Coming soon</div>}
 
-      {activeMap === "Miramar" && <div>Miramar</div>}
+      {activeMap === "Sanhok" && <div className={theme.centerContent}>Coming soon</div>}
 
-      {activeMap === "Sanhok" && <div>Sanhok</div>}
+      {activeMap === "Taego" && <div className={theme.centerContent}>Coming soon</div>}
 
-      {activeMap === "Taego" && <div>Taego</div>}
-
-      {activeMap === "Vikendi" && <div>Vikendi</div>}
+      {activeMap === "Vikendi" && <div className={theme.centerContent}>Coming soon</div>}
     </div>
   );
 }

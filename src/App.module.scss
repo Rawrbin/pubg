@@ -10,6 +10,7 @@ html,body
 .container {
     max-width: 1280px;
     margin: auto;
+    margin-top: 30px;
 }
 
 h1 {
@@ -17,6 +18,7 @@ h1 {
 }
 
 .activeMaps {
+    text-align: center;
     display:flex;
     justify-content: space-around;
     flex-direction: row;
@@ -25,9 +27,12 @@ h1 {
     margin-bottom: 16px;
     list-style: none;
     cursor: pointer; 
+    //color: #5e6984;
+    //padding: 12px;
 
     .selectedMap {
-        color: red;
+        font-weight: 600;
+        color: #1e222b;
     }
 
     /*.mapNames {
@@ -65,4 +70,9 @@ h1 {
         flex: 1 1 50%; 
         text-align: center;
     } 
+}
+
+.centerContent {
+    text-align: center;
+    margin-top: 30px;
 }

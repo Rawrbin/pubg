@@ -31,33 +31,26 @@ function Erangel() {
 
   return (
     <div className={theme.container}>
+      {console.log(mapGrid.filter((x) => x.id === 55))}
       <div className={theme.gridContainer}>
         {mapGrid
           .sort((a, b) => (a.id > b.id ? 1 : -1))
           .map((i) => {
             return (
-              <div
-                className={
-                  randomNumber === i.id
-                    ? theme.selectedGridItem
-                    : theme.gridItem
-                }
-                key={i}
-              >
-                {console.log(randomNumber === i.id)}
+              <div className={randomNumber === i.id ? theme.selectedGridItem : theme.gridItem} key={i.id}>
                 {i.location}
               </div>
             );
           })}
       </div>
-      <button onClick={() => handleClick()}>Generate new location</button>
-      <div>
-        {mapGrid
-          .filter((x) => x.id === randomNumber)
-          .map((x) => {
-            return <div key={x.id}>{x.location}</div>;
-          })}
-      </div>
+      <button className={theme.button} onClick={() => handleClick()}>
+        Generate new location
+      </button>
+      {mapGrid
+        .filter((x) => x.id === randomNumber)
+        .map((x) => {
+          return <div>{x.location}</div>;
+        })}
     </div>
   );
 }
