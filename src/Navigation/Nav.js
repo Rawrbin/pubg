@@ -1,11 +1,7 @@
 import React from "react";
 import firebase from "../Firebase.js";
 import theme from "./Nav.module.scss";
-import Erangel from "../Erangel/Erangel.js";
-import Miramar from "../Miramar/Miramar.js";
-import Taego from "../Taego/Taego.js";
-import Sanhok from "../Sanhok/Sanhok.js";
-import Vikendi from "../Vikendi/Vikendi.js";
+import Maps from "../Maps/Maps.js";
 import { useState, useEffect } from "react";
 
 function Navbar() {
@@ -53,15 +49,11 @@ function Navbar() {
       </div>
 
       {activeMap === null && <div className={theme.centerContent}>Select a map from the menu above</div>}
-      {activeMap === "Erangel" && <Erangel />}
-
-      {activeMap === "Miramar" && <Miramar />}
-
-      {activeMap === "Sanhok" && <Sanhok />}
-
-      {activeMap === "Taego" && <Taego />}
-
-      {activeMap === "Vikendi" && <Vikendi />}
+      {activeMap === "Erangel" && <Maps name="Erangel" grid="grid" />}
+      {activeMap === "Miramar" && <Maps name="Miramar" grid="grid" />}
+      {activeMap === "Taego" && <Maps name="Taego" grid="grid" />}
+      {activeMap === "Sanhok" && <Maps name="Sanhok" grid="mediumGrid" />}
+      {activeMap === "Vikendi" && <Maps name="Vikendi" grid="mediumGrid" />}
     </div>
   );
 }
