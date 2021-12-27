@@ -3,6 +3,7 @@ import firebase from "../Firebase.js";
 import theme from "./Nav.module.scss";
 import Erangel from "../Erangel/Erangel.js";
 import Miramar from "../Miramar/Miramar.js";
+import Taego from "../Taego/Taego.js";
 import { useState, useEffect } from "react";
 
 function Navbar() {
@@ -56,7 +57,7 @@ function Navbar() {
 
       {activeMap === "Sanhok" && <div className={theme.centerContent}>Coming soon</div>}
 
-      {activeMap === "Taego" && <div className={theme.centerContent}>Coming soon</div>}
+      {activeMap === "Taego" && <Taego />}
 
       {activeMap === "Vikendi" && <div className={theme.centerContent}>Coming soon</div>}
     </div>
