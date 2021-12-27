@@ -4,6 +4,8 @@ import theme from "./Nav.module.scss";
 import Erangel from "../Erangel/Erangel.js";
 import Miramar from "../Miramar/Miramar.js";
 import Taego from "../Taego/Taego.js";
+import Sanhok from "../Sanhok/Sanhok.js";
+import Vikendi from "../Vikendi/Vikendi.js";
 import { useState, useEffect } from "react";
 
 function Navbar() {
@@ -55,11 +57,11 @@ function Navbar() {
 
       {activeMap === "Miramar" && <Miramar />}
 
-      {activeMap === "Sanhok" && <div className={theme.centerContent}>Coming soon</div>}
+      {activeMap === "Sanhok" && <Sanhok />}
 
       {activeMap === "Taego" && <Taego />}
 
-      {activeMap === "Vikendi" && <div className={theme.centerContent}>Coming soon</div>}
+      {activeMap === "Vikendi" && <Vikendi />}
     </div>
   );
 }
