@@ -31,7 +31,6 @@ function Erangel() {
 
   return (
     <div className={theme.container}>
-      {console.log(mapGrid.filter((x) => x.id === 55))}
       <div className={theme.gridContainer}>
         {mapGrid
           .sort((a, b) => (a.id > b.id ? 1 : -1))
