@@ -8,6 +8,8 @@ import sanhok from "../images/sanhok.jpg";
 import erangel from "../images/erangel.jpg";
 import vikendi from "../images/vikendi.jpg";
 import miramar from "../images/miramar.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [data, setData] = useState([]);
@@ -34,6 +36,11 @@ function Navbar() {
     <div className={theme.container}>
       <div className={theme.activeMaps}>
         <nav className={theme.navigation}>
+          {isLoading && (
+            <div className={theme.fa}>
+              <FontAwesomeIcon icon={faSpinner} title={"Loading map"} className={"fa-spin"} />
+            </div>
+          )}
           <ul>
             {!isLoading &&
               data
