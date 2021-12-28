@@ -1,12 +1,9 @@
 import React from "react";
-import firebase from "../Firebase.js";
 import theme from "./Maps.module.scss";
 import { useState, useEffect } from "react";
-import taego from "../images/taego.jpg";
-import sanhok from "../images/sanhok.jpg";
-import erangel from "../images/erangel.jpg";
-import vikendi from "../images/vikendi.jpg";
-import miramar from "../images/miramar.jpg";
+import bigGrid from "./bigGrid.json";
+import mediumGrid from "./mediumGrid.json";
+//import firebase from "../Firebase.js";
 
 function Maps(props) {
   const [mapGrid, setMapGrid] = useState([]);
@@ -18,6 +15,16 @@ function Maps(props) {
   };
 
   useEffect(() => {
+    if (props.grid === "bigGrid" && isLoading) {
+      setMapGrid(bigGrid);
+    }
+    if (props.grid === "mediumGrid" && isLoading) {
+      setMapGrid(mediumGrid);
+    }
+    setIsLoading(false);
+  }, [isLoading, props]);
+
+  /*useEffect(() => {
     isLoading &&
       firebase
         .firestore()
@@ -31,24 +38,14 @@ function Maps(props) {
         });
 
     setIsLoading(false);
-  }, [isLoading, props]);
+  }, [isLoading, props]);*/
 
   return (
     <div className={theme.container}>
       <div
         className={props.grid === "mediumGrid" ? theme.mediumGridContainer : theme.gridContainer}
         style={{
-          backgroundImage: `url(${
-            props.name === "Taego"
-              ? taego
-              : props.name === "Sanhok"
-              ? sanhok
-              : props.name === "Erangel"
-              ? erangel
-              : props.name === "Miramar"
-              ? miramar
-              : vikendi
-          })`,
+          backgroundImage: `url(${props.backgroundImage})`,
         }}
       >
         {mapGrid
@@ -68,7 +65,7 @@ function Maps(props) {
       {mapGrid
         .filter((x) => x.id === randomNumber)
         .map((x) => {
-          return <div>{x.location}</div>;
+          return <div key={x.id}>{x.location}</div>;
         })}
     </div>
   );

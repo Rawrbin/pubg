@@ -3,6 +3,11 @@ import firebase from "../Firebase.js";
 import theme from "./Nav.module.scss";
 import Maps from "../Maps/Maps.js";
 import { useState, useEffect } from "react";
+import taego from "../images/taego.jpg";
+import sanhok from "../images/sanhok.jpg";
+import erangel from "../images/erangel.jpg";
+import vikendi from "../images/vikendi.jpg";
+import miramar from "../images/miramar.jpg";
 
 function Navbar() {
   const [data, setData] = useState([]);
@@ -49,11 +54,11 @@ function Navbar() {
       </div>
 
       {activeMap === null && <div className={theme.centerContent}>Select a map from the menu above</div>}
-      {activeMap === "Erangel" && <Maps name="Erangel" grid="grid" />}
-      {activeMap === "Miramar" && <Maps name="Miramar" grid="grid" />}
-      {activeMap === "Taego" && <Maps name="Taego" grid="grid" />}
-      {activeMap === "Sanhok" && <Maps name="Sanhok" grid="mediumGrid" />}
-      {activeMap === "Vikendi" && <Maps name="Vikendi" grid="mediumGrid" />}
+      {activeMap === "Erangel" && <Maps name="Erangel" grid="bigGrid" backgroundImage={erangel} />}
+      {activeMap === "Miramar" && <Maps name="Miramar" grid="bigGrid" backgroundImage={miramar} />}
+      {activeMap === "Taego" && <Maps name="Taego" grid="bigGrid" backgroundImage={taego} />}
+      {activeMap === "Sanhok" && <Maps name="Sanhok" grid="mediumGrid" backgroundImage={sanhok} />}
+      {activeMap === "Vikendi" && <Maps name="Vikendi" grid="mediumGrid" backgroundImage={vikendi} />}
     </div>
   );
 }
