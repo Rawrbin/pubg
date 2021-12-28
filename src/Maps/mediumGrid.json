@@ -1,151 +1,187 @@
 [
   {
     "id": 1,
-    "location": "AI"
+    "location": "AI",
+    "active": true
   },
   {
     "id": 2,
-    "location": "BI"
+    "location": "BI",
+    "active": true
   },
   {
     "id": 3,
-    "location": "CI"
+    "location": "CI",
+    "active": true
   },
   {
     "id": 4,
-    "location": "DI"
+    "location": "DI",
+    "active": true
   },
   {
     "id": 5,
-    "location": "EI"
+    "location": "EI",
+    "active": true
   },
   {
     "id": 6,
-    "location": "FI"
+    "location": "FI",
+    "active": true
   },
 
   {
     "id": 7,
-    "location": "AJ"
+    "location": "AJ",
+    "active": true
   },
   {
     "id": 8,
-    "location": "BJ"
+    "location": "BJ",
+    "active": true
   },
   {
     "id": 9,
-    "location": "CJ"
+    "location": "CJ",
+    "active": true
   },
   {
     "id": 10,
-    "location": "DJ"
+    "location": "DJ",
+    "active": true
   },
   {
     "id": 11,
-    "location": "EJ"
+    "location": "EJ",
+    "active": true
   },
   {
     "id": 12,
-    "location": "FJ"
+    "location": "FJ",
+    "active": true
   },
 
   {
     "id": 13,
-    "location": "AK"
+    "location": "AK",
+    "active": true
   },
   {
     "id": 14,
-    "location": "BK"
+    "location": "BK",
+    "active": true
   },
   {
     "id": 15,
-    "location": "CK"
+    "location": "CK",
+    "active": true
   },
   {
     "id": 16,
-    "location": "DK"
+    "location": "DK",
+    "active": true
   },
   {
     "id": 17,
-    "location": "EK"
+    "location": "EK",
+    "active": true
   },
   {
     "id": 18,
-    "location": "FK"
+    "location": "FK",
+    "active": true
   },
 
   {
     "id": 19,
-    "location": "AL"
+    "location": "AL",
+    "active": true
   },
   {
     "id": 20,
-    "location": "BL"
+    "location": "BL",
+    "active": true
   },
   {
     "id": 21,
-    "location": "CL"
+    "location": "CL",
+    "active": true
   },
   {
     "id": 22,
-    "location": "DL"
+    "location": "DL",
+    "active": true
   },
   {
     "id": 23,
-    "location": "EL"
+    "location": "EL",
+    "active": true
   },
   {
     "id": 24,
-    "location": "FL"
+    "location": "FL",
+    "active": true
   },
 
   {
     "id": 25,
-    "location": "AM"
+    "location": "AM",
+    "active": true
   },
   {
     "id": 26,
-    "location": "BM"
+    "location": "BM",
+    "active": true
   },
   {
     "id": 27,
-    "location": "CM"
+    "location": "CM",
+    "active": true
   },
   {
     "id": 28,
-    "location": "DM"
+    "location": "DM",
+    "active": true
   },
   {
     "id": 29,
-    "location": "EM"
+    "location": "EM",
+    "active": true
   },
   {
     "id": 30,
-    "location": "FM"
+    "location": "FM",
+    "active": true
   },
 
   {
     "id": 31,
-    "location": "AN"
+    "location": "AN",
+    "active": true
   },
   {
     "id": 32,
-    "location": "BN"
+    "location": "BN",
+    "active": true
   },
   {
     "id": 33,
-    "location": "CN"
+    "location": "CN",
+    "active": true
   },
   {
     "id": 34,
-    "location": "DN"
+    "location": "DN",
+    "active": true
   },
   {
     "id": 35,
-    "location": "EN"
+    "location": "EN",
+    "active": true
   },
   {
     "id": 36,
-    "location": "FN"
+    "location": "FN",
+    "active": true
   }
 ]

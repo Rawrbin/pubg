@@ -9,39 +9,35 @@ import mediumGrid from "./mediumGrid.json";
 //import firebase from "../Firebase.js";
 
 function Maps(props) {
-  const [mapGrid, setMapGrid] = useState([]);
+  const [grid, setGrid] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [randomNumber, setRandomNumber] = useState(null);
-  const handleClick = () => {
-    const min = 1;
-    setRandomNumber(min + Math.floor(Math.random() * mapGrid.length));
-  };
+  const [randomNumber, setRandomNumber] = useState(0);
+  const [locations, setLocations] = useState([]);
+  let activeGrids = grid.filter((x) => x.active === true);
 
+  let allGrids = grid;
+
+  const handleClick = async () => {
+    const min = 0;
+    const randomNumber = min + Math.floor(Math.random() * activeGrids.length);
+    setRandomNumber(randomNumber);
+  };
   useEffect(() => {
     if (props.grid === "bigGrid" && isLoading) {
-      setMapGrid(bigGrid);
+      setGrid(bigGrid);
     }
     if (props.grid === "mediumGrid" && isLoading) {
-      setMapGrid(mediumGrid);
+      setGrid(mediumGrid);
     }
     setIsLoading(false);
-  }, [isLoading, props]);
+  }, [isLoading, props.grid]);
 
-  /*useEffect(() => {
-    isLoading &&
-      firebase
-        .firestore()
-        .collection(props.grid)
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            const data = doc.data();
-            setMapGrid((prevState) => [...prevState, data]);
-          });
-        });
-
-    setIsLoading(false);
-  }, [isLoading, props]);*/
+  const AddOrRemove = (array, value) => {
+    //setLocations((prevState) => [...prevState, allGrids]);
+    let item = array[value.id - 1];
+    item.active = item.active ? false : true;
+    allGrids[array.id - 1] = item;
+  };
 
   return (
     <div className={theme.container}>
@@ -51,26 +47,34 @@ function Maps(props) {
           backgroundImage: `url(${props.backgroundImage})`,
         }}
       >
-        {mapGrid
+        {grid
           .sort((a, b) => (a.id > b.id ? 1 : -1))
           .map((i) => {
             return (
-              <div className={randomNumber === i.id ? theme.selectedGridItem : theme.gridItem} key={i.id}>
+              <div
+                onClick={() => AddOrRemove(grid, i)}
+                className={
+                  randomNumber && activeGrids[randomNumber].location === i.location
+                    ? theme.selectedGridItem
+                    : allGrids.filter((x) => x.id === i.id && x.active === false).map((x) => x.active)[0] === false
+                    ? theme.inactive
+                    : theme.gridItem
+                }
+                key={i.id}
+              >
                 {i.location}
               </div>
             );
           })}
       </div>
-
       <button className={theme.button} onClick={() => handleClick()}>
         {props.test}
         Generate new location
       </button>
-      {mapGrid
-        .filter((x) => x.id === randomNumber)
-        .map((x) => {
-          return <div key={x.id}>{x.location}</div>;
-        })}
+      <div>
+        {}
+        {randomNumber && activeGrids[randomNumber].location ? activeGrids[randomNumber].location : "AI"}
+      </div>
     </div>
   );
 }
