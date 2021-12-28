@@ -3,8 +3,8 @@ import theme from "./Maps.module.scss";
 import { useState, useEffect } from "react";
 import bigGrid from "./bigGrid.json";
 import mediumGrid from "./mediumGrid.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 //import { faGithub } from '@fortawesome/free-brands-svg-icons'
 //import firebase from "../Firebase.js";
 
@@ -45,26 +45,22 @@ function Maps(props) {
 
   return (
     <div className={theme.container}>
-      {isLoading ? (
-        <FontAwesomeIcon icon={faSpinner} title={"Loading map"} className={"fa-spin"} />
-      ) : (
-        <div
-          className={props.grid === "mediumGrid" ? theme.mediumGridContainer : theme.gridContainer}
-          style={{
-            backgroundImage: `url(${props.backgroundImage})`,
-          }}
-        >
-          {mapGrid
-            .sort((a, b) => (a.id > b.id ? 1 : -1))
-            .map((i) => {
-              return (
-                <div className={randomNumber === i.id ? theme.selectedGridItem : theme.gridItem} key={i.id}>
-                  {i.location}
-                </div>
-              );
-            })}
-        </div>
-      )}
+      <div
+        className={props.grid === "mediumGrid" ? theme.mediumGridContainer : theme.gridContainer}
+        style={{
+          backgroundImage: `url(${props.backgroundImage})`,
+        }}
+      >
+        {mapGrid
+          .sort((a, b) => (a.id > b.id ? 1 : -1))
+          .map((i) => {
+            return (
+              <div className={randomNumber === i.id ? theme.selectedGridItem : theme.gridItem} key={i.id}>
+                {i.location}
+              </div>
+            );
+          })}
+      </div>
 
       <button className={theme.button} onClick={() => handleClick()}>
         {props.test}
