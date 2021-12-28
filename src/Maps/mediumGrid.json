@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "location": "AI"
+  },
+  {
+    "id": 2,
+    "location": "BI"
+  },
+  {
+    "id": 3,
+    "location": "CI"
+  },
+  {
+    "id": 4,
+    "location": "DI"
+  },
+  {
+    "id": 5,
+    "location": "EI"
+  },
+  {
+    "id": 6,
+    "location": "FI"
+  },
+
+  {
+    "id": 7,
+    "location": "AJ"
+  },
+  {
+    "id": 8,
+    "location": "BJ"
+  },
+  {
+    "id": 9,
+    "location": "CJ"
+  },
+  {
+    "id": 10,
+    "location": "DJ"
+  },
+  {
+    "id": 11,
+    "location": "EJ"
+  },
+  {
+    "id": 12,
+    "location": "FJ"
+  },
+
+  {
+    "id": 13,
+    "location": "AK"
+  },
+  {
+    "id": 14,
+    "location": "BK"
+  },
+  {
+    "id": 15,
+    "location": "CK"
+  },
+  {
+    "id": 16,
+    "location": "DK"
+  },
+  {
+    "id": 17,
+    "location": "EK"
+  },
+  {
+    "id": 18,
+    "location": "FK"
+  },
+
+  {
+    "id": 19,
+    "location": "AL"
+  },
+  {
+    "id": 20,
+    "location": "BL"
+  },
+  {
+    "id": 21,
+    "location": "CL"
+  },
+  {
+    "id": 22,
+    "location": "DL"
+  },
+  {
+    "id": 23,
+    "location": "EL"
+  },
+  {
+    "id": 24,
+    "location": "FL"
+  },
+
+  {
+    "id": 25,
+    "location": "AM"
+  },
+  {
+    "id": 26,
+    "location": "BM"
+  },
+  {
+    "id": 27,
+    "location": "CM"
+  },
+  {
+    "id": 28,
+    "location": "DM"
+  },
+  {
+    "id": 29,
+    "location": "EM"
+  },
+  {
+    "id": 30,
+    "location": "FM"
+  },
+
+  {
+    "id": 31,
+    "location": "AN"
+  },
+  {
+    "id": 32,
+    "location": "BN"
+  },
+  {
+    "id": 33,
+    "location": "CN"
+  },
+  {
+    "id": 34,
+    "location": "DN"
+  },
+  {
+    "id": 35,
+    "location": "EN"
+  },
+  {
+    "id": 36,
+    "location": "FN"
+  }
+]
