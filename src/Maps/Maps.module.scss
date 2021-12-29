@@ -68,6 +68,17 @@
         background-color: #008859;
     }
 
+    .inactive {
+        border-bottom: 0.1px solid rgba(255, 255, 255, 0.8);
+        border-right: 0.1px solid rgba(255, 255, 255, 0.8);
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+        background-color: #464646;
+    }
+
     .button {
         margin: .25rem .125rem;
         padding: 12px;
