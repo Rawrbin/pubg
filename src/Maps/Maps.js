@@ -3,6 +3,7 @@ import theme from "./Maps.module.scss";
 import { useState, useEffect } from "react";
 import bigGrid from "./bigGrid.json";
 import mediumGrid from "./mediumGrid.json";
+import Banner from "../Banner/Banner.js";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 //import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -69,13 +70,13 @@ function Maps(props) {
             );
           })}
       </div>
-      <button className={theme.button} onClick={() => handleClick()}>
-        Generate new location
-      </button>
-      <div>
-        {}
-        {randomNumber && activeGrids[randomNumber].location ? activeGrids[randomNumber].location : "AI"}
+      <Banner test="Note: You can click on the map to remove possible landing areas. " />
+      <div className={theme.buttonContainer}>
+        <button className={theme.button} onClick={() => handleClick()}>
+          Generate new location
+        </button>
       </div>
+      <div>{randomNumber && activeGrids[randomNumber].location ? activeGrids[randomNumber].location : "AI"}</div>
     </div>
   );
 }
