@@ -49,7 +49,13 @@ function Maps(props) {
   return (
     <div className={theme.container}>
       <div
-        className={props.grid === "mediumGrid" ? theme.mediumGridContainer : theme.gridContainer}
+        className={
+          props.grid === "mediumGrid"
+            ? theme.mediumGridContainer
+            : props.grid === "bigGrid"
+            ? theme.gridContainer
+            : theme.smallGridContainer
+        }
         style={{
           backgroundImage: `url(${props.backgroundImage})`,
         }}

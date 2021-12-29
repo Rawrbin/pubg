@@ -46,6 +46,22 @@
         padding: 0;
     }
 
+    .smallGridContainer {
+        margin: auto;
+        max-width: 776px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        aspect-ratio: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        margin-bottom: 30px;
+        padding: 10px;
+        padding: 0;
+    }
+    
     .gridItem {
         border-bottom: 0.1px solid rgba(255, 255, 255, 0.8);
         border-right: 0.1px solid rgba(255, 255, 255, 0.8);
