@@ -3,6 +3,7 @@ import theme from "./Maps.module.scss";
 import { useState, useEffect } from "react";
 import bigGrid from "./bigGrid.json";
 import mediumGrid from "./mediumGrid.json";
+import smallGrid from "./smallGrid.json";
 import Banner from "../Banner/Banner.js";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -30,6 +31,9 @@ function Maps(props) {
     }
     if (props.grid === "mediumGrid" && isLoading) {
       setGrid(mediumGrid);
+    }
+    if (props.grid === "smallGrid" && isLoading) {
+      setGrid(smallGrid);
     }
     setIsLoading(false);
   }, [isLoading, props.grid]);

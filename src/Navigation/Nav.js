@@ -59,7 +59,7 @@ function Navbar() {
       {activeMap === "Erangel" && <Maps name="Erangel" grid="bigGrid" backgroundImage={erangel} />}
       {activeMap === "Miramar" && <Maps name="Miramar" grid="bigGrid" backgroundImage={miramar} />}
       {activeMap === "Taego" && <Maps name="Taego" grid="bigGrid" backgroundImage={taego} />}
-      {activeMap === "Sanhok" && <Maps name="Sanhok" grid="mediumGrid" backgroundImage={sanhok} />}
+      {activeMap === "Sanhok" && <Maps name="Sanhok" grid="smallGrid" backgroundImage={sanhok} />}
       {activeMap === "Vikendi" && <Maps name="Vikendi" grid="mediumGrid" backgroundImage={vikendi} />}
     </div>
   );

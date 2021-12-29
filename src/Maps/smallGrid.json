@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "location": "AI",
+    "active": true
+  },
+  {
+    "id": 2,
+    "location": "BI",
+    "active": true
+  },
+  {
+    "id": 3,
+    "location": "CI",
+    "active": true
+  },
+  {
+    "id": 4,
+    "location": "DI",
+    "active": true
+  },
+
+  {
+    "id": 5,
+    "location": "AJ",
+    "active": true
+  },
+  {
+    "id": 6,
+    "location": "BJ",
+    "active": true
+  },
+  {
+    "id": 7,
+    "location": "CJ",
+    "active": true
+  },
+  {
+    "id": 8,
+    "location": "DJ",
+    "active": true
+  },
+
+  {
+    "id": 9,
+    "location": "AK",
+    "active": true
+  },
+  {
+    "id": 10,
+    "location": "BK",
+    "active": true
+  },
+  {
+    "id": 11,
+    "location": "CK",
+    "active": true
+  },
+  {
+    "id": 12,
+    "location": "DK",
+    "active": true
+  },
+
+  {
+    "id": 13,
+    "location": "AL",
+    "active": true
+  },
+  {
+    "id": 14,
+    "location": "BL",
+    "active": true
+  },
+  {
+    "id": 15,
+    "location": "CL",
+    "active": true
+  },
+  {
+    "id": 16,
+    "location": "DL",
+    "active": true
+  }
+]
