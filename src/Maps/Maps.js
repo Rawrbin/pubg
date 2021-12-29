@@ -12,16 +12,17 @@ function Maps(props) {
   const [grid, setGrid] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [randomNumber, setRandomNumber] = useState(0);
-  const [locations, setLocations] = useState([]);
-  let activeGrids = grid.filter((x) => x.active === true);
+  const [, setLocations] = useState([]);
 
   let allGrids = grid;
+  let activeGrids = grid.filter((x) => x.active === true);
 
   const handleClick = async () => {
     const min = 0;
     const randomNumber = min + Math.floor(Math.random() * activeGrids.length);
     setRandomNumber(randomNumber);
   };
+
   useEffect(() => {
     if (props.grid === "bigGrid" && isLoading) {
       setGrid(bigGrid);
@@ -33,10 +34,11 @@ function Maps(props) {
   }, [isLoading, props.grid]);
 
   const AddOrRemove = (array, value) => {
-    //setLocations((prevState) => [...prevState, allGrids]);
+    setRandomNumber(null);
     let item = array[value.id - 1];
     item.active = item.active ? false : true;
     allGrids[array.id - 1] = item;
+    setLocations((prevState) => [...prevState, allGrids]);
   };
 
   return (
@@ -68,7 +70,6 @@ function Maps(props) {
           })}
       </div>
       <button className={theme.button} onClick={() => handleClick()}>
-        {props.test}
         Generate new location
       </button>
       <div>
