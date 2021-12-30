@@ -1,6 +1,3 @@
-.testing {
-    color: red;
-}
 .container {
     margin: auto;
     text-align: center;
@@ -70,7 +67,7 @@
         justify-content: center;
         align-items: center;
         opacity: 0.5;
-        //cursor: pointer;
+        cursor: pointer;
     }
 
     .selectedGridItem {
@@ -94,6 +91,7 @@
         opacity: 0.7;
         background-color: #464646;
     }
+
     .buttonContainer {
         max-width: 776px;
         margin: 0 auto;
@@ -102,7 +100,7 @@
 
     .button {
         width: 100%;
-        margin: .25rem .125rem;
+        margin-top: .25rem;
         padding: 12px;
         border-radius: 4px;
         border: 1px solid #0a58ca;

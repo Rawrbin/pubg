@@ -15,9 +15,7 @@ function Maps(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [randomNumber, setRandomNumber] = useState(0);
   const [, setLocations] = useState([]);
-
-  let allGrids = grid;
-  let activeGrids = grid.filter((x) => x.active === true);
+  const activeGrids = grid.filter((x) => x.active === true);
 
   const handleClick = async () => {
     const min = 0;
@@ -42,8 +40,8 @@ function Maps(props) {
     setRandomNumber(null);
     let item = array[value.id - 1];
     item.active = item.active ? false : true;
-    allGrids[array.id - 1] = item;
-    setLocations((prevState) => [...prevState, allGrids]);
+    grid[array.id - 1] = item;
+    setLocations((prevState) => [...prevState, grid]);
   };
 
   return (
@@ -69,7 +67,7 @@ function Maps(props) {
                 className={
                   randomNumber && activeGrids[randomNumber].location === i.location
                     ? theme.selectedGridItem
-                    : allGrids.filter((x) => x.id === i.id && x.active === false).map((x) => x.active)[0] === false
+                    : grid.filter((x) => x.id === i.id && x.active === false).map((x) => x.active)[0] === false
                     ? theme.inactive
                     : theme.gridItem
                 }

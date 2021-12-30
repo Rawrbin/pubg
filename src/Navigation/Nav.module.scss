@@ -1,9 +1,8 @@
 .activeMaps {
   background-color: rgba(0,0,0,0.92);
   color: #f5f5f7;
-  display:flex;
+  display: flex;
   justify-content: space-around;
-  height: 44px;
   margin: auto;
   margin-bottom: 16px;
   line-height: 44px;
@@ -25,24 +24,47 @@
   display: flex; 
   justify-content: space-between;
   text-align: center;
-}
 
-.navigation li {
-  cursor: pointer; 
-  color: #f5f5f7;
-  padding: 0 12px;
-  opacity: 0.8;
-}
+  li {
+    cursor: pointer; 
+    color: #f5f5f7;
+    padding: 0 12px;
+    opacity: 0.8;
+  }
 
-.navigation li:hover {
-  opacity: 1;
-}
-
-@media all and (max-width: 1000px) { 
-
+  li:hover {
+    opacity: 1;
+  }
 }
 
 .centerContent {
   text-align: center;
   margin-top: 30px;
+}
+
+.button {
+  display: none;
+  border: none;
+}
+
+@media screen and (max-width: 640px) {
+  .activeMaps {
+    display:flex;
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  .button {
+    display: block;
+    float: right;
+    padding: 8px 16px 8px 8px;
+    font-size: 22px;
+    color: #f5f5f7;
+    text-align: right;
+    height: 44px;
+    background-color: transparent;
+  }
 }
